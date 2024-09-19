@@ -1,6 +1,5 @@
 package bsit;
 
-import java.util.List;
 
 public interface DogInterface {
     Dog setName(String dogname);
