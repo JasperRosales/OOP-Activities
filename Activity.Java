@@ -1,3 +1,4 @@
+
 public class Activity{
     public static void main(String[] args){
       Dog hotdog = new Dog();
@@ -7,7 +8,6 @@ public class Activity{
       hotdog.setName("Johnrey Banagwas");
       footlong.setName("Kevin Durant");
       colddog.setName("SiRon maysala");
-
 
       System.out.println(hotdog.showName());
       System.out.println(footlong.showName());
@@ -26,18 +26,36 @@ public class Activity{
       System.out.println(colddog.showNumberOfPuppies());
 
 
-      String[] puppies1 = {"ron", "jeric", "taguro", "olaf"};
-      String[] puppies2 = {"hazel", "mica", "johnray", "charlie"};
-      String[] puppies3 = {"aaron", "furrer", "marco", "nicole mitch manigat"};
+      Dog[] puppies1 = {
+              new Dog().setName("Ron"),
+              new Dog().setName("Jeric"),
+              new Dog().setName("Taguro"),
+              new Dog().setName("Olaf")
+      };
+
+      Dog[] puppies2 = {
+              new Dog().setName("Hazel"),
+              new Dog().setName("Mica"),
+              new Dog().setName("Janray")
+      };
+
+
+      Dog[] puppies3 = {
+              new Dog().setName("Aaron"),
+              new Dog().setName("Furrer"),
+              new Dog().setName("Marco"),
+              new Dog().setName("Nicole Mitch Maningat"),
+              new Dog().setName("Charcle")
+      };
 
       hotdog.setListOfPuppies(puppies1);
-      footlong.setListOfPuppies(puppies2);
-      colddog.setListOfPuppies(puppies3);
-
       hotdog.showPuppies();
-      footlong.showPuppies();
-      colddog.showPuppies();
 
+      footlong.setListOfPuppies(puppies2);
+      footlong.showPuppies();
+
+      colddog.setListOfPuppies(puppies3);
+      colddog.showPuppies();
 
 
     }
