@@ -1,6 +1,4 @@
 
-
-import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,11 +6,12 @@ public class Dog implements DogInterface{
     public String name;
     public Boolean isMale;
     public Integer numberOfPuppies;
-    public String[] lsitOfPuppies;
+    public List<Dog> listOfPuppies = new ArrayList<>();
     
     @Override
-    public String setName(String dogname) {
-        return this.name = dogname;
+    public Dog setName(String dogname) {
+        this.name = dogname;
+        return this;
     }
 
     public String showName() {
@@ -33,15 +32,25 @@ public class Dog implements DogInterface{
     public String showNumberOfPuppies() {
         return "Number of puppies: " + this.numberOfPuppies;
     }
-    
-    public  String[] setListOfPuppies(String[] puppies){
-        return this.lsitOfPuppies = puppies;
-    }
-    
 
-    public void showPuppies(){
-        for(int i = 0; i < this.numberOfPuppies; i++ ){
-            System.out.println(lsitOfPuppies[i]);
+    //Just to insert an array/list of dogs to the Attribute
+    public Dog setListOfPuppies(Dog[] puppies){
+        for(int i = 0; i < this.numberOfPuppies; i++){
+            this.listOfPuppies.add(puppies[i]);
         }
+        return this;
     }
+
+    public Dog showPuppies(){
+        System.out.print("List of puppies of " + this.name + ": {");
+        for(int i = 0; i < this.numberOfPuppies;i++){
+            System.out.print(" (" + this.listOfPuppies.get(i).name + ") ");
+        }
+        System.out.print("}\n");
+        return this;
+    }
+
+
+
+
 }
