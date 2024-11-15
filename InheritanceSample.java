@@ -1,4 +1,4 @@
-public class InheritanceExample {
+public class InheritanceSample {
     public static void main(String[] args){
 
         System.out.println("--------------Student-------------------");
