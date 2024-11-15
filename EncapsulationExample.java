@@ -1,4 +1,4 @@
-public class EncapsulationExample{
+public class EncapsulationSample{
     public static void main(String[] args){
 
         System.out.println("--------------Student-------------------");
@@ -29,70 +29,4 @@ public class EncapsulationExample{
 
 
     }
-}
-
-
-class Student{
-    private int Student_id;
-    private String Name;
-
-    public void setId(Integer s_id){
-        this.Student_id = s_id;
-    }
-
-    public void setName(String s_name){
-        this.Name = s_name;
-    }
-
-    public String getName(){
-        return this.Name;
-    }
-
-    public Integer getId(){
-        return this.Student_id;
-    }
-
-}
-
-
-class Book{
-    private Integer book_number;
-    private String title;
-    private String author;
-    private Double price;
-
-    public void setBookNumber(Integer bookNum){
-        this.book_number = bookNum;
-    }
-
-    public void setTitle(String Title){
-        this.title = Title;
-    }
-
-
-    public void setAuthor(String Author){
-        this.author = Author;
-    }
-
-    public void setPrice(Double Price){
-        this.price = Price;
-    }
-
-    public Integer getBookNumber(){
-        return this.book_number;
-    }
-
-    public String getTitle(){
-        return this.title;
-    }
-
-
-    public String getAuthor(){
-        return this.author;
-    }
-
-    public Double getPrice(){
-        return this.price;
-    }
-
 }
